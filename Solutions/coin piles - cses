@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+const long long MOD = 1e9 + 7;
+/*
+let there be x moves in total after which we will have a = 0 and b = 0 and in each move we remove 3 coins so total coins 
+removed = 3*x = a+b , hence a+b%3==0 is a necessary condition and lets say x1 be the number of moves of removing 2 in a and 
+y1 be the number of moves for removing 1 in a and similarly x2 , y2 for b. x1 = y2 and y1 = x2 obviously and 2*x1 + y1 = a and
+2*x2 + y2 = b and x1+y1 = (a+b)/3 = x(total moves) so we get x1 = (2*a -b)/3 and y1 = (2*b - a)/3 and if these are>=0 then 
+we will always be able to empty the two stacks.
+*/
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(nullptr);
+    int t;
+    cin>>t;
+    while(t--){
+    ll a , b, x , y;
+    cin>>a>>b;
+    x = (2*a - b)/3;
+    y = (2*b - a)/3;
+    if((a+b)%3==0){
+        if(x>=0 && y>=0) cout<<"YES"<<'\n';
+        else cout<<"NO"<<'\n';
+    } else cout<<"NO"<<'\n';
+    }
+    return 0;
+}
