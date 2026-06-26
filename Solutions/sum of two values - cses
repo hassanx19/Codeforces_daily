@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+const long long MOD = 1e9 + 7;
+/*
+
+*/
+void solve(){
+    int t;
+    cin>>t;
+    while(t--){
+
+    }
+}
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(nullptr);
+    int n , x , found , pair = -1;
+    cin>>n>>x;
+    vll a(n),b,c; bool flag = false;
+    for(int i = 0 ; i < n ; i++){
+        cin>>a[i];
+        c.push_back(x-a[i]);
+    } b = a;
+    sort(b.begin(),b.end());
+    sort(c.begin(),c.end());
+    for(int i = 0 ; i < c.size(); i++){
+        if(*lower_bound(b.begin(),b.end(),c[i])==c[i]){
+            found = c[i];
+            flag = true;
+            break;
+        }
+    }
+    if(flag){
+        auto it = find(a.begin(),a.end(),found);
+        for(int i = 0 ; i < n ; i++){
+            if(x-found == a[i]){
+                if(i!=it-a.begin()){
+                pair = i;
+                break;
+                }
+            }
+        }
+        if(pair!=-1) cout<<it-a.begin()+1<<" "<<pair+1<<'\n';
+        else cout<<"IMPOSSIBLE"<<'\n';
+
+    }else cout<<"IMPOSSIBLE"<<'\n';
+    return 0;
+}
+
