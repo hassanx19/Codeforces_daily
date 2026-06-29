@@ -9,10 +9,11 @@ Topics Covered till date :
 - [x] Searching Algorithms - Bubble sort , Selection Sort , Insertion sort , etc
 - [x] Binary Search , Two pointers
 - [x] Basic STL templates
+- [ ] Linked lists 
+- [ ] Stacks , Queues.
 - [ ] Bit Manipulation
 - [ ] Back Tracking
 - [ ] Dynamic Programming
-- [ ] Stacks , Queues , Linked Lists
 - [ ] Pattern templates
 - [ ] Graphs and Trees Basics
 
