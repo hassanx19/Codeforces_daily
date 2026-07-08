@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+typedef unsigned long long ull;
+const long long MOD = 1e9 + 7;
+#define FASTIO ios_base::sync_with_stdio(false);cin.tie(NULL); cout.tie(NULL);
+#define nl '\n'
+/*
+
+*/
+
+int main() {
+    FASTIO;
+    int t;
+    cin>>t;
+    while(t--){
+    ll y , x; // row y (i) and column x (j);
+    cin>>y>>x;
+    if(x>=1 && x<=y) cout<<((y&1) ? y*y-2*y+x+1 : y*y-x+1)<<nl;
+    else cout<<((x&1) ? x*x+1-y : x*x-2*x+1+y)<<nl;
+    }
+    return 0;
+}
